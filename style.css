@@ -80,7 +80,12 @@ h2 {
         font-size: 3.6em;
     }
 
+    .story-intro {
+        padding: 15px;
+    }
+
     .story-intro h1 {
         font-size: 1.6em;
     }
+
 }
