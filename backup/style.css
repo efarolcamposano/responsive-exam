@@ -66,6 +66,9 @@
     margin-bottom: 24px;
   }
 
+  .sub-story img {
+    height: 350px;
+  }
 
   img::before {  
     content: "No Image";
@@ -89,26 +92,11 @@
     background-color: #dcdcdc;
   }
 
-  .sub-story span {
-    height: 350px;
-    display: block;
-    overflow: hidden;
-}
-
-
   @media (max-width: 1023px) {
     .page-wrap {
         padding: 0 20px;
     }
  }
-
-@media (min-width: 768px) {
-    .sub-story span {
-        height: 350px;
-        display: block;
-        overflow: hidden;
-    }
-}
    
   @media (max-width: 767px) {
     .sub-story {
