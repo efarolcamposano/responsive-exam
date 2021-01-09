@@ -75,4 +75,12 @@ h2 {
         flex: 0 0 100%;
         max-width: 100%;
     }
+
+    h1 {
+        font-size: 3.6em;
+    }
+
+    .story-intro h1 {
+        font-size: 1.6em;
+    }
 }
