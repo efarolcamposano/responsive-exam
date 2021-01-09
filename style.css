@@ -1,15 +1,17 @@
 * {
     box-sizing: border-box;
   }
-  
+
+  html {
+      font-size: 100%;
+  }
+
   body {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
+      margin: 0;
+      padding: 0;
   }
   
   .page-wrap {
-    width: 100%;
     max-width: 800px;
     margin: 20px auto;
   }
@@ -22,7 +24,6 @@
   img {
     display: block;
     width: 100%;
-    position: relative;
   }
   
   a {
@@ -30,6 +31,10 @@
   }
   
   .story-intro {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background: rgba(0, 0, 0, 0.75);
     padding: 20px;
     color: white;
@@ -38,7 +43,7 @@
   h1 {
     font-size: 4em;
   }
-  
+
   h1,
   h2 {
     margin: 0 0 10px 0;
@@ -47,95 +52,115 @@
   .story-intro h1 {
     font-size: 2.5em;
   }
-  
   .story-intro p {
     margin: 0;
   }
   
   .sub-stories {
+    margin: 0 0 25px 0;
     display: flex;
     flex-wrap: wrap;
-    margin:  0 -8px;
   }
   
   .sub-story {
-    width: 33.3333333333%;
+    width: 250px;
+    margin: 0 25px 0 0;
     position: relative;
-    font-size: 0.8em;
-    padding: 0 8px;
-    margin-bottom: 24px;
+    font-size: 80%;
+    transition: .2s ease-out;
   }
-
-
-  img::before {  
-    content: "No Image";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    font-size: 1.3em;
-    color: #717171;
-  }
-
-  img::after {  
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #dcdcdc;
-  }
-
-  .sub-story span {
-    height: 350px;
-    display: block;
-    overflow: hidden;
-}
-
-
-  @media (max-width: 1023px) {
-    .page-wrap {
-        padding: 0 20px;
-    }
- }
-
-@media (min-width: 768px) {
-    .sub-story span {
-        height: 350px;
-        display: block;
-        overflow: hidden;
-    }
-}
+  
    
-  @media (max-width: 767px) {
+  @media (min-width: 768px) {
+    .sub-story:last-child {
+        margin-right: 0;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .page-wrap {
+        max-width: 720px;
+    }
+
+    .page-wrap h1 {
+        font-size: 3em;
+    }
+
+    h1, 
+    h2 {
+        margin: 0 0 5px 0;
+    }
+
+    .main-story h1 {
+        font-size: 1.2em;
+    }
+
+    .main-story p {
+        font-size: .8em;
+    }
+
     .sub-story {
-      width: 50%;
+        width: 223px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .page-wrap {
+        max-width: 540px;
+    }
+
+    .sub-story {
+        width: 47.5%;
+        margin-bottom: 20px;
+    }
+
+    .sub-story:nth-child(2) {
+        margin-right: 0;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .page-wrap {
+        max-width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .page-wrap h1 {
+        font-size: 2em;
+    }
+
+    .page-wrap p {
+        font-size: .9em;
+    }
+
+    .main-story h1 {
+        font-size: 1.2em;
+    }
+    
+    .sub-story {
+        width: 100%;
+        margin-right: 0;
+        position: relative;
+    }
+
+    .sub-stories .story-intro {
+        position: relative;
+        padding-left: 80px;
     }
 
     .sub-story img {
-        min-height: 250px;
-        width: 100%;
+        position: absolute;
+        width: 55px;
+        height: 72px;
+        z-index: 5;
+        left: 3px;
+        top: 50%;
+        transform: translateY(-50%);
     }
-  }
-  
-  @media (max-width: 600px) {
-    .sub-story {
-      width: 100%;
-    }
-  
-    h1 {
-      font-size: 3em;
-    }
-  
+
     .story-intro {
-      padding: 15px;
+        position: relative;
     }
-  
-    .story-intro h1 {
-      font-size: 1.6em;
-    }
+
   }
-  
