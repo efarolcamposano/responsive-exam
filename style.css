@@ -22,6 +22,7 @@
   img {
     display: block;
     width: 100%;
+    position: relative;
   }
   
   a {
@@ -66,12 +67,10 @@
   }
 
   .sub-story img {
-    position: relative;
     height: 350px;
-    width: 100%;
   }
 
-  .sub-story img::before {  
+  img::before {  
     content: "No Image";
     position: absolute;
     top: 50%;
@@ -82,7 +81,7 @@
     color: #717171;
   }
 
-  .sub-story img::after {  
+  img::after {  
     content: "";
     display: block;
     position: absolute;
